@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!--CSS LINK-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/App.css">
+    <link rel="stylesheet" href="/css/Admin.css">
+
+
+    <title>All Member List</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">    
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="/adminhome">  Nazib Mahfuz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome">
+                        <button type="button" class="btn btn-light">
+                            Home
+                        </button>
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome/allMemberList">
+                        <button type="button" class="btn btn-light">
+                            All Member List 
+                        </button>
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome/facultyMemberList">
+                        <button type="button" class="btn btn-light">
+                            Faculty List 
+                        </button>
+                    </a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome/alumniMemberList"> 
+                        <button type="button" class="btn btn-light">
+                            Alumni List
+                        </button>
+                    </a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminhome/studentMemberList">
+                        <button class="btn btn-light">
+                            Student List
+                        </button>
+                    </a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">
+                        <button class="btn btn-danger">
+                            Logout
+                        </button>
+                    </a>
+                </li>
+    
+            </div>
+        </nav>
+        <br><br><br>
+
+        <center>
+            <h2>Faculty Member List</h2>
+          </center>
+            <hr>
+            <table border="0" width="100%">
+                <tr class="table-header">
+                    <td>Member ID</td>
+                    <td>Name</td>
+                    <td>Picture</td>
+                    <td>Email</td>
+                    <td>Contact</td>
+                    <td>AIUB ID</td>
+                    <td>Status</td>
+                    <td>View Profile</td>
+                    <td>Action</td>
+                </tr>
+                <tr class="postDetails">
+                    <td>01</td>
+                    <td>Nazib Mahfuz</td>
+                    <td><img src="/images/n2.JPG" class= "rounded-circle" height="100px" width="100px"></td>
+                    <td>nazibmahfuz60@gmail.com</td>
+                    <td>01777127618</td>
+                    <td>17-34418-1</td>
+                    <td>
+                        <span class="badge badge-primary">Faculty</span>
+                    </td>
+                    <td><button class="btn btn-info">View Profile</button></td>
+                    <td>
+                        <button class="btn btn-warning">Block</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+
+                <tr class="postDetails">
+                    <td>01</td>
+                    <td>Nazib Mahfuz</td>
+                    <td><img src="/images/mahbub.png" class= "rounded-circle" height="100px" width="100px"></td>
+                    <td>nazibmahfuz60@gmail.com</td>
+                    <td>01777127618</td>
+                    <td>17-34418-1</td>
+                    <td>
+                        <span class="badge badge-primary">Student</span>
+                    </td>
+                    <td><button class="btn btn-info">View Profile</button></td>
+                    <td>
+                        <button class="btn btn-warning">Block</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </table>
+</body>
+</html>

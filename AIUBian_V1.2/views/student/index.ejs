@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--===========================Bootstrap 4 CDN Link=======================================-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="/student/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="/student/script.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!--Google Fonts Link-->
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|El+Messiri|Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Student Home</title>
+
+    <style>
+
+        body{
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="#">  <%= user.name %> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    
+                  <a class="nav-link" href="#">
+                    <button class="btn btn-light">
+                        Home
+                    </button>
+                    <span class="sr-only">(current)</span></a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/studentHome/timeLine">
+                        <button type="button" class="btn btn-light">
+                           Time Line
+                        </button>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/studentHome/chat">
+                        <button type="button" class="btn btn-light">
+                            Messages <span class="badge badge-primary">4</span>
+                        </button>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;-->
+                        <div id="username" hidden><%=notifiInfo[0].receiver%></div>
+                        <button type="button" id="notification" onclick="showNotifi()"   class="btn btn-light">
+                            Notification <span id="notifiNum" class="badge badge-primary"><%= notifiInfo.length %></span>
+                        </button>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/studentHome/settings">
+                        <button class="btn btn-light">
+                            Settings
+                        </button>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">
+                        <button class="btn btn-danger">
+                            Logout
+                        </button>
+                    </a>
+                </li>
+
+            </div>
+          </nav>
+
+          <br><br><br>
+        <div class="row">
+
+            
+            <!--Right Sides Buttons-->
+            <div class="col-sm-3 container bg card">
+                <br>
+                <!--Profile information-->
+                <center>
+                    <img src="/images/1easuM.jpg" class="rounded-circle" width="70px" height="70px"><br>
+                </center>
+                <hr>
+                <center>
+                    <a href="/studentHome/studentProfile"><button class="btn btn-info">Profile</button></a> 
+                    <a href="/studentHome/editProfile"><button class="btn btn-info">Edit-Profile</button></a>
+                </center>
+                
+                <hr>
+                
+                <button class="btn btn-light">Faculty Post</button>
+                <button class="btn btn-light">Alumni Post</button>
+                <button class="btn btn-light">Student Post</button>
+                <button class="btn btn-light">Job/Internship</button>
+                <br>
+                <hr>
+            </div>
+
+            <!--Middle Sides////Posts-->
+            <div class="col-sm-6 container ">
+                <div class="container bg card">
+                    <br>
+                    <table border="0">
+                        <!--Name,Status Row-->
+                        <tr>
+                            <td width="2%"><img src="/images/1easuM.jpg" class="rounded-circle" height="40px" width="40px"></td>
+                            <td>
+                                <text class="name">Nazib Mahfuz</text>
+                                <span class="badge badge-pill badge-secondary">Student</span>
+                            </td>
+                        </tr>
+
+                        <!--Date Time Row-->
+                        <tr>
+                            <td></td>
+                            <td>25-02-2020, <i>06:21:36 PM</i></td>
+                        </tr>
+
+                        <!--Image/Video/Text Row-->
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/images/1easuM.jpg" height="300px" width="90%">
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0">
+                        <tr>
+                            <td width="2%"></td>
+                            <td>
+                                <center>
+                                    <button class="btn btn-light">
+                                        Like <span class="badge badge-primary">15</span>
+                                    </button>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <button class="btn btn-light">
+                                        Comments <span class="badge badge-primary">15</span>
+                                    </button>
+                                </center>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
+
+                <br><br>
+
+                <div class="container bg card">
+                    <br>
+                    <table border="0">
+                        <!--Name,Status Row-->
+                        <tr>
+                            <td width="2%"><img src="/images/1easuM.jpg" class="rounded-circle" height="40px" width="40px"></td>
+                            <td>
+                                <text class="name">Nazib Mahfuz</text>
+                                <span class="badge badge-pill badge-secondary">Student</span>
+                            </td>
+                        </tr>
+
+                        <!--Date Time Row-->
+                        <tr>
+                            <td></td>
+                            <td>25-02-2020, <i>06:21:36 PM</i></td>
+                        </tr>
+
+                        <!--Image/Video/Text Row-->
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/images/1easuM.jpg" height="300px" width="90%">
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0">
+                        <tr>
+                            <td width="2%"></td>
+                            <td>
+                                <center>
+                                    <button class="btn btn-light">
+                                        Like <span class="badge badge-primary">15</span>
+                                    </button>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <button class="btn btn-light">
+                                        Comments <span class="badge badge-primary">15</span>
+                                    </button>
+                                </center>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
+
+                <br><br>
+
+                <div class="container bg card">
+                    <br>
+                    <table border="0">
+                        <!--Name,Status Row-->
+                        <tr>
+                            <td width="2%"><img src="/images/1easuM.jpg" class="rounded-circle" height="40px" width="40px"></td>
+                            <td>
+                                <text class="name">Nazib Mahfuz</text>
+                                <span class="badge badge-pill badge-secondary">Student</span>
+                            </td>
+                        </tr>
+
+                        <!--Date Time Row-->
+                        <tr>
+                            <td></td>
+                            <td>25-02-2020, <i>06:21:36 PM</i></td>
+                        </tr>
+
+                        <!--Image/Video/Text Row-->
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/images/1easuM.jpg" height="300px" width="90%">
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0">
+                        <tr>
+                            <td width="2%"></td>
+                            <td>
+                                <center>
+                                    <button class="btn btn-light">
+                                        Like <span class="badge badge-primary">15</span>
+                                    </button>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <button class="btn btn-light">
+                                        Comments <span class="badge badge-primary">15</span>
+                                    </button>
+                                </center>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
+            </div>
+
+            <div class="col-sm-3 container">
+                <br>
+                
+            </div>
+        </div>
+        <button type="button" onclick="f1()"></button>
+        <div id="demo">sdlgsldgh</div>
+</body>
+</html>
